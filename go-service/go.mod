@@ -1,4 +1,4 @@
-module greeter-service
+module github.com/kalradev/microservices-mock
 
 go 1.13
 

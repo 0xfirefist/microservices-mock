@@ -3,9 +3,10 @@ package main
 import (
 	"context"
 	"fmt"
-	pb "greeter-service/greeter-service/greeter"
 	"log"
 	"net"
+
+	pb "github.com/kalradev/microservices-mock/pb"
 
 	"google.golang.org/grpc"
 )

@@ -2,16 +2,17 @@ package main
 
 import (
 	"context"
-	pb "greeter-service/greeter-service/greeter"
 	"log"
 	"os"
 	"time"
+
+	pb "github.com/kalradev/microservices-mock/pb"
 
 	"google.golang.org/grpc"
 )
 
 const (
-	address     = "localhost:50051"
+	address     = "localhost:8081"
 	defaultName = "go grpc client"
 )
 

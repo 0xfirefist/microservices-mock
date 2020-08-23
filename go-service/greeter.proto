@@ -1,8 +1,9 @@
 syntax = "proto3";
 package greeter;
 
-option go_package = "greeter-service/greeter";
+option go_package = "pb";
 
+// protoc -I ./ ./greeter.proto --go_out=plugins=grpc:./pb
 
 service Greeter {
   rpc SayHello (HelloRequest) returns (HelloReply) {}
