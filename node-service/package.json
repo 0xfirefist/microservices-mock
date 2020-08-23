@@ -1,0 +1,12 @@
+{
+  "name": "node-service",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "Dev Kalra",
+  "license": "MIT",
+  "dependencies": {
+    "@grpc/proto-loader": "^0.5.5",
+    "express": "^4.17.1",
+    "grpc": "^1.24.3"
+  }
+}
