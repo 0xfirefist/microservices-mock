@@ -21,7 +21,7 @@ const express = require('express')
 const app = express()
 const port = 3000
 const grpcIP = process.env.GRPC_HOST
-const grpcPort = process.env.GRPC_PORT
+const grpcPort = "8081"
 
 app.get('/', (req, res) => {
     var name = "NO QUERY"
