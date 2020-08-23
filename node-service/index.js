@@ -20,6 +20,8 @@ var greeter_proto = protoDescriptor.greeter;
 const express = require('express')
 const app = express()
 const port = 3000
+const grpcIP = process.env.GRPC_HOST
+const grpcPort = process.env.GRPC_PORT
 
 app.get('/', (req, res) => {
     var name = "NO QUERY"
@@ -27,7 +29,7 @@ app.get('/', (req, res) => {
         name = req.query.who
     }
 
-    var client = new greeter_proto.Greeter('localhost:50051',
+    var client = new greeter_proto.Greeter((grpcIP).toString()+":"+(grpcPort).toString(),
         grpc.credentials.createInsecure());
 
     client.sayHello({ Name: name }, function (err, response) {

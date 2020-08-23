@@ -6,13 +6,12 @@ import (
 	pb "greeter-service/greeter-service/greeter"
 	"log"
 	"net"
+	"os"
 
 	"google.golang.org/grpc"
 )
 
-const (
-	port = ":50051"
-)
+var port = fmt.Sprintf(":%s", os.Getenv("GRPC_PORT"))
 
 type GreeterServer struct {
 }
