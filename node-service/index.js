@@ -1,4 +1,4 @@
-var PROTO_PATH = __dirname + '/../go-service/greeter.proto';
+var PROTO_PATH = __dirname + '/greeter.proto';
 var grpc = require('grpc');
 var protoLoader = require('@grpc/proto-loader');
 // Suggested options for similarity to existing grpc.load behavior
@@ -19,7 +19,7 @@ var greeter_proto = protoDescriptor.greeter;
 // server
 const express = require('express')
 const app = express()
-const port = 3000
+const port = 8080
 const grpcIP = process.env.GRPC_HOST
 const grpcPort = "8081"
 

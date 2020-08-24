@@ -1,0 +1,18 @@
+syntax = "proto3";
+package greeter;
+
+option go_package = "pb";
+
+// protoc -I ./ ./greeter.proto --go_out=plugins=grpc:./pb
+
+service Greeter {
+  rpc SayHello (HelloRequest) returns (HelloReply) {}
+} 
+
+message HelloRequest {
+    string Name = 1;
+}
+
+message HelloReply {
+    string WelcomeMessage = 1;
+}
