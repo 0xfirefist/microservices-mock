@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: node-service
+  labels:
+    app: node-api
+spec:
+  selector:
+    matchLabels:
+      app: node-api
+  template:
+    metadata:
+      labels:
+        app: node-api
+    spec:
+      containers:
+      - name: node-api-service
+        image: 48959548/node-service:latest
+        ports:
+        - containerPort: 8080
+
